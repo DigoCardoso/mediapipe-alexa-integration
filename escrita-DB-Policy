@@ -1,0 +1,43 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Publish",
+        "iot:Receive",
+        "iot:PublishRetain"
+      ],
+      "Resource": [
+        "arn:aws:iot:us-east-1:046048650659:topic/sdk/test/java",
+        "arn:aws:iot:us-east-1:046048650659:topic/sdk/test/python",
+        "arn:aws:iot:us-east-1:046048650659:topic/sdk/test/js",
+	"arn:aws:iot:us-east-1:046048650659:topic/alexa/db",
+	"arn:aws:iot:us-east-1:046048650659:topic/alexa/trigger"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Subscribe"
+      ],
+      "Resource": [
+        "arn:aws:iot:us-east-1:046048650659:topicfilter/sdk/test/java",
+        "arn:aws:iot:us-east-1:046048650659:topicfilter/sdk/test/python",
+        "arn:aws:iot:us-east-1:046048650659:topicfilter/sdk/test/js",
+	"arn:aws:iot:us-east-1:046048650659:topicfilter/alexa/trigger"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Connect"
+      ],
+      "Resource": [
+        "arn:aws:iot:us-east-1:046048650659:client/sdk-java",
+        "arn:aws:iot:us-east-1:046048650659:client/basicPubSub",
+        "arn:aws:iot:us-east-1:046048650659:client/sdk-nodejs-*"
+      ]
+    }
+  ]
+}
